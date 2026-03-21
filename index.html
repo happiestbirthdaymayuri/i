@@ -1126,6 +1126,10 @@ body {
     </head>
 
 <body>
+    <audio id="music" loop preload="auto">
+<source src="song.mp3" type="audio/mpeg">
+</audio>
+
     <!-- Floating Hearts Background -->
 <div class="floating-hearts"></div>
     <div id="wrapper">
@@ -1248,14 +1252,15 @@ body {
                 <div class="card2">
                     <div class="card2-content">
                         <h3>To You!</h3>
-                        <h4>Happy Birthday 🎂
+                        <h2>Happy Birthday 🎂
 
-I know this Wishes might not mean much to you, and maybe you don’t really think about me the way I sometimes think about you. That’s okay, I’ve accepted that. I just didn’t want the day to pass without wishing someone who unknowingly became a little special to me.
-You probably don’t realize it, but there’s something about you that stays in my mind — your smile, your presence, just you being you. Maybe it never mattered to you, maybe it never will, but still I genuinely hope life gives you happiness, success, and all the beautiful moments you deserve.
-And even if I’m not someone important in your world, I’m still quietly wishing the best for you today. ✨
-N I'LL ALWAYS BE YOU'RE SIDE AS A ---FRIEND.....
+Happy Birthday :) I hope today treats you really well and you actually take a break from overthinking everything for once.
+you deserve a day that’s just easy, fun, and a little special. 
+And yeah, try not to look this good all the time… it’s already unfair for everyone else.
+I’m not saying you’re special or anything… but you kinda are,
+N I'LL ALWAYS BE YOU'RE SIDE
 
-                        </h4>
+                        </h2>
 
                         <div class="imageCute2">
                             <img src="gif.gif" alt="">
@@ -1388,6 +1393,16 @@ setInterval(createHeart,400);
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+    const music = document.getElementById("music");
+
+if (localStorage.getItem("played")) {
+  music.play();
+}
+
+document.addEventListener("click", () => {
+  music.play();
+  localStorage.setItem("played", "true");
+});
 </script>
 
 </html>
